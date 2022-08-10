@@ -273,7 +273,8 @@ window.addEventListener("keydown", (event) => {
   if (
     !player.dead &&
     timer !== 0 &&
-    document.querySelector("#displayText").innerHTML !== "Player 1 Wins"
+    document.querySelector("#displayText").innerHTML !==
+      "Player 1 Wins<br><br> Press F5 to start again"
   ) {
     switch (event.key) {
       case "d":
@@ -296,7 +297,8 @@ window.addEventListener("keydown", (event) => {
   if (
     !enemy.dead &&
     timer !== 0 &&
-    document.querySelector("#displayText").innerHTML !== "Player 2 Wins"
+    document.querySelector("#displayText").innerHTML !==
+      "Player 2 Wins<br><br> Press F5 to start again"
   ) {
     switch (event.key) {
       case "ArrowRight":
