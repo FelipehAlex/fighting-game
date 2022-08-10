@@ -270,7 +270,11 @@ function animate() {
 animate();
 
 window.addEventListener("keydown", (event) => {
-  if (!player.dead && timer !== 0) {
+  if (
+    !player.dead &&
+    timer !== 0 &&
+    document.querySelector("#displayText").innerHTML !== "Player 1 Wins"
+  ) {
     switch (event.key) {
       case "d":
         keys.d.pressed = true;
@@ -289,7 +293,11 @@ window.addEventListener("keydown", (event) => {
     }
   }
 
-  if (!enemy.dead && timer !== 0) {
+  if (
+    !enemy.dead &&
+    timer !== 0 &&
+    document.querySelector("#displayText").innerHTML !== "Player 2 Wins"
+  ) {
     switch (event.key) {
       case "ArrowRight":
         keys.ArrowRight.pressed = true;
